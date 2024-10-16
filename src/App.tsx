@@ -1,8 +1,10 @@
+import AllCountries from './Containers/AllCountries/AllCountries.tsx';
+
 const App = () => {
 
   return (
     <>
-      I'm starting my home work #61! ^_^
+      <AllCountries/>
     </>
   );
 };
