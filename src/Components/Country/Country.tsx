@@ -1,5 +1,6 @@
 import { ICountry } from '../../types';
 import * as React from 'react';
+import './Country.css';
 
 interface IProps {
   country: ICountry;
@@ -8,7 +9,7 @@ interface IProps {
 
 const Country: React.FC<IProps> = React.memo(({country, onClickCountry}) => {
   return (
-    <div style={{cursor: 'pointer'}} onClick={onClickCountry}>
+    <div className="country" onClick={onClickCountry}>
       {country.name}
     </div>
   );

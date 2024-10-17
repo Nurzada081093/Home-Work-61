@@ -5,7 +5,6 @@ import { ICountry } from '../../types';
 import Country from '../../Components/Country/Country.tsx';
 import CountryBlock from '../../Components/CountryBlock/CountryBlock.tsx';
 
-
 const AllCountries = () => {
   const [countries, setCountries] = useState<ICountry[]>([]);
   const [countryClicked, setCountryClicked] = useState<string | null>(null);
@@ -24,8 +23,8 @@ const AllCountries = () => {
   }, [fetchData]);
 
   return (
-    <div className='container h-25 border border-black d-flex justify-content-between p-0'>
-      <div className='w-25 border border-black ml-0'>
+    <div className='container d-flex justify-content-between p-0'>
+      <div className='w-25 border border-black m-2 p-2' style={{height: '570px', overflowY: 'auto', overflowX: 'hidden'}}>
         {countries.length > 0 ?
           countries.map((country) => (
             <Country
@@ -38,7 +37,7 @@ const AllCountries = () => {
           <div>Стран нет</div>
         }
       </div>
-      <div className="w-75 text-center">
+      <div className="w-75 mt-2">
         {
           countryClicked !== null && (
             <CountryBlock code={countryClicked}/>
