@@ -39,8 +39,10 @@ const AllCountries = () => {
       </div>
       <div className="w-75 mt-2">
         {
-          countryClicked !== null && (
+          countryClicked !== null ? (
             <CountryBlock code={countryClicked}/>
+          ) : (
+            <div style={{border: '1px solid grey', textAlign: 'center', fontSize: '24px', fontStyle: 'italic', fontWeight: 600, marginLeft: '20px', padding: '265px 0'}}>Выберите страну из списка!</div>
           )
         }
       </div>
