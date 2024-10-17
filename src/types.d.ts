@@ -1,8 +1,13 @@
 export interface ICountry {
+  alpha3Code: string;
+  name: string;
+}
+
+export interface ICountryInfo {
   name: string;
   alpha3Code: string;
   independent: boolean;
-  borders: IBorder[];
+  borders: string[];
   capital: string;
   flag: string;
   population: number;
@@ -10,7 +15,4 @@ export interface ICountry {
   subregion: string;
 }
 
-export interface IBorder {
-  alpha3Code: string;
-}
 
